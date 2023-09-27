@@ -17,6 +17,8 @@ class className extends JobRouter\Engine\Runtime\PhpFunction\DialogFunction
         $arr = array();
         $i = 0;
 
+        $this->debug($i);
+
         if ($result01 === false) {
             throw new JobRouterException($jobDB->getErrorMessage());
         }while ($row = $jobDB->fetchRow($result01)) {
